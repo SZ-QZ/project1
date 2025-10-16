@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Data | Research Paper Toolbox</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <h1 class="site-title"><a href="index.html">Research Paper Toolbox</a></h1>
+    <nav aria-label="Primary">
+      <ul class="top-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="data.html" aria-current="page">Data</a></li>
+        <li><a href="template.html">Template</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <nav aria-label="On this page" class="module-toc">
+      <strong>On this page</strong>
+      <ol>
+        <li><a href="#format">Format data for analysis</a></li>
+        <li><a href="#dichotomous">Create dichotomous variables</a></li>
+        <li><a href="#desc">Run descriptive statistics</a></li>
+        <li><a href="#infer">Run inferential statistics</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <section id="format" aria-labelledby="format-h2">
+        <h2 id="format-h2">Format data for analysis</h2>
+        <p>Download the practice sheet: <a href="tutorial_spreadsheet.xlsx" download>tutorial_spreadsheet.xlsx</a></p>
+        <p>Use clear column names and one meaning per column; avoid mixed entry styles (e.g., “Y/Yes/1”). Keep a raw copy and clean a working copy.</p>
+        <figure>
+          <img src="illustrations/datalesson_fig2.png" alt="Spreadsheet cleaned so each column holds one consistent value" />
+          <figcaption>Cleaned data with consistent values per column.</figcaption>
+        </figure>
+      </section>
+
+      <section id="dichotomous" aria-labelledby="dichotomous-h2">
+        <h2 id="dichotomous-h2">Create dichotomous variables</h2>
+        <aside class="callout" role="note">
+          <h3>Why 0/1?</h3>
+          <p>Binary (0/1) columns make filtering and group comparisons easy later in Excel or SPSS.</p>
+        </aside>
+        <p>Convert categories to separate 0/1 columns (e.g., <em>tutorial_type_video</em>, <em>has_experience</em>), keeping the original category column.</p>
+        <figure>
+          <img src="illustrations/datalesson_fig3.png" alt="Example sheet with several 0/1 indicator columns added" />
+          <figcaption>Indicators for tutorial type, experience, and tasks.</figcaption>
+        </figure>
+      </section>
+
+      <section id="desc" aria-labelledby="desc-h2">
+        <h2 id="desc-h2">Run descriptive statistics</h2>
+        <p>Excel → <strong>File &gt; Options &gt; Add-ins</strong> → enable <strong>Analysis ToolPak</strong>. Then <strong>Data &gt; Data Analysis &gt; Descriptive Statistics</strong> on continuous variables; output to a new sheet.</p>
+        <figure>
+          <img src="illustrations/datalesson_fig4.png" alt="Excel output listing mean and standard deviation for several variables" />
+          <figcaption>Descriptive statistics for rating variables.</figcaption>
+        </figure>
+      </section>
+
+      <section id="infer" aria-labelledby="infer-h2">
+        <h2 id="infer-h2">Run inferential statistics</h2>
+        <p>Choose a test that fits your question and data:</p>
+        <ul>
+          <li><strong>Two groups:</strong> t-test or Mann–Whitney U</li>
+          <li><strong>3+ groups:</strong> ANOVA or Kruskal–Wallis</li>
+          <li><strong>Association:</strong> Pearson or Spearman correlation</li>
+        </ul>
+        <p>Example: compare usefulness by tutorial type with Kruskal–Wallis: <em>Analyze → Nonparametric Tests → K Independent Samples</em>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2025</p></footer>
+</body>
+</html>
